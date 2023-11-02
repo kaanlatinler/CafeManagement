@@ -26,9 +26,24 @@ namespace CafeManagement.Database
             if(dt.Rows.Count > 0)
             { 
                 isValid = true;
+                User = dt.Rows[0]["uName"].ToString();
+                Rank = dt.Rows[0]["uRank"].ToString();
             }
 
             return isValid;
+        }
+
+        public static string user, rank;
+
+        public static string User
+        { 
+            get { return user; }
+            private set { user = value; }
+        }
+        public static string Rank
+        {
+            get { return rank; }
+            private set { rank = value; }
         }
     }
 }
