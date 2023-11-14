@@ -70,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSample.Designer.cs">
+      <DependentUpon>AddSample.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DBengine.cs" />
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
@@ -89,8 +95,77 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\AddTable.Designer.cs">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\POSform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\POSform.Designer.cs">
+      <DependentUpon>POSform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\ProductControl.Designer.cs">
+      <DependentUpon>ProductControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleView.Designer.cs">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CategoryView.Designer.cs">
+      <DependentUpon>CategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProductView.Designer.cs">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffView.Designer.cs">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TableView.Designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddSample.resx">
+      <DependentUpon>AddSample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +174,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\AddTable.resx">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\POSform.resx">
+      <DependentUpon>POSform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\ProductControl.resx">
+      <DependentUpon>ProductControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +203,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SampleView.resx">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CategoryView.resx">
+      <DependentUpon>CategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductView.resx">
+      <DependentUpon>ProductView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffView.resx">
+      <DependentUpon>StaffView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -189,6 +297,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\Orj\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\add-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\take-away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\fast-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\hatChief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Orj\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

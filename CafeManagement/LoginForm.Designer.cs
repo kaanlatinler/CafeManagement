@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.UsernameTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -36,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -51,8 +51,20 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.SlateBlue;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(370, 201);
+            this.guna2Panel1.Size = new System.Drawing.Size(363, 201);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(69, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Please Enter Username And Password";
             // 
             // guna2PictureBox1
             // 
@@ -166,25 +178,13 @@
             this.ExitBtn.Text = "EXIT";
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(69, 184);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Please Enter Username And Password";
-            // 
             // guna2MessageDialog1
             // 
             this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
             this.guna2MessageDialog1.Caption = null;
             this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning;
             this.guna2MessageDialog1.Parent = this;
-            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
             this.guna2MessageDialog1.Text = null;
             // 
             // LoginForm
@@ -192,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 531);
+            this.ClientSize = new System.Drawing.Size(363, 531);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PasswordTxt);

@@ -1,4 +1,6 @@
 ﻿using CafeManagement.Database;
+using CafeManagement.Model;
+using CafeManagement.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,13 @@ namespace CafeManagement
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        static MainForm Obj;
+
+        public static MainForm Instance
+        {
+            get { if (Obj == null) { Obj = new MainForm(); } return Obj; }
         }
 
         public  void AddControls(Form f)
@@ -38,11 +47,38 @@ namespace CafeManagement
             UsernameTxtLbl.Text = DBengine.User;
             HomeBtn.Checked = true;
             AddControls(new HomeForm());
+            Obj = this;
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
             AddControls(new HomeForm());
+        }
+
+        private void CategoryBtn_Click(object sender, EventArgs e)
+        {
+            AddControls(new CategoryView());
+        }
+
+        private void TableBtn_Click(object sender, EventArgs e)
+        {
+            AddControls(new TableView());
+        }
+
+        private void StaffBtn_Click(object sender, EventArgs e)
+        {
+            AddControls(new StaffView());
+        }
+
+        private void ProductBtn_Click(object sender, EventArgs e)
+        {
+            AddControls(new ProductView());
+        }
+
+        private void POSBtn_Click(object sender, EventArgs e)
+        {
+            POSform form = new POSform();
+            form.Show();
         }
     }
 }
