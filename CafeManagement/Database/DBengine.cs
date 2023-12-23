@@ -13,7 +13,7 @@ namespace CafeManagement.Database
 {
     class DBengine
     {
-        public static readonly string connString = @"Data Source=DESKTOP-L24PRRJ\SQLEXPRESS;Initial Catalog=CafeManagamentDB;Persist Security Info=True;User ID=sa;Password=kaanhdd374";
+        public static readonly string connString = @"Data Source=*******;Initial Catalog=******;Persist Security Info=True;User ID=***;Password=*******";
         public static SqlConnection conn= new SqlConnection(connString);
 
         public static bool IsValid(string user, string pass)
