@@ -58,7 +58,7 @@
             // 
             // guna2MessageDialog1
             // 
-            this.guna2MessageDialog1.Parent = null;
+            this.guna2MessageDialog1.Parent = this;
             // 
             // guna2DataGridView1
             // 

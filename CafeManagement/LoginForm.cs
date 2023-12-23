@@ -25,17 +25,32 @@ namespace CafeManagement
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if(DBengine.IsValid(UsernameTxt.Text, PasswordTxt.Text)==false)
-            {
-                guna2MessageDialog1.Show("Invalid Username Or Password");
-                return;
-            }
-            else
+            if(DBengine.IsAdmin(UsernameTxt.Text, PasswordTxt.Text))
             {
                 this.Hide();
                 MainForm form = new MainForm();
                 form.Show();
             }
+            else
+            {
+                if (DBengine.IsValid(UsernameTxt.Text, PasswordTxt.Text))
+                {
+                    this.Hide();
+                    MainFormStaff form = new MainFormStaff();
+                    form.Show();
+                }
+                else
+                {
+                    guna2MessageDialog1.Show("Kullanıcı Adı Veya Şifre Hatalı");
+                    return;
+                }
+            }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            UsernameTxt.Text = "admin";
+            PasswordTxt.Text = "kaanhdd374";
         }
     }
 }

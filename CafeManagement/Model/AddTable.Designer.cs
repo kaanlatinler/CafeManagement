@@ -38,6 +38,10 @@
             this.label1.Size = new System.Drawing.Size(111, 30);
             this.label1.Text = "Add Table";
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Parent = this;
+            // 
             // NameTxt
             // 
             this.NameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;

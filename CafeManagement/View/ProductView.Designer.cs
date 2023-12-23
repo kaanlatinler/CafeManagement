@@ -57,6 +57,10 @@
             this.label2.Size = new System.Drawing.Size(138, 30);
             this.label2.Text = "Product List";
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Parent = this;
+            // 
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;

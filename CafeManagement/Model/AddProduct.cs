@@ -87,7 +87,8 @@ namespace CafeManagement.Model
 
             if (DBengine.SQL(query, ht) > 0)
             {
-                MessageBox.Show("Saved Successfully");
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("Kayıt İşlemi Başarılı");
                 id = 0;
                 cID= 0;
                 NameTxt.Text = "";
@@ -113,7 +114,6 @@ namespace CafeManagement.Model
                 PriceTxt.Text = dt.Rows[0]["productPrice"].ToString();
 
                 Byte[] imageArray = (byte[])(dt.Rows[0]["productImg"]);
-                byte[] byteImageArray = imageArray;
                 ImageTxt.Image = Image.FromStream(new MemoryStream(imageArray));
             }
         }

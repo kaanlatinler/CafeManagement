@@ -50,7 +50,9 @@ namespace CafeManagement.Model
 
             if (DBengine.SQL(query, ht) > 0)
             {
-                MessageBox.Show("Saved Successfully");
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("Kayıt İşlemi Başarılı");
+
                 id = 0;
                 NameTxt.Text = "";
                 NameTxt.Focus();

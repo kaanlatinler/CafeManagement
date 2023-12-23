@@ -34,6 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RankCB = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.PassTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -132,11 +134,42 @@
             this.RankCB.Size = new System.Drawing.Size(200, 36);
             this.RankCB.TabIndex = 7;
             // 
+            // PassTxt
+            // 
+            this.PassTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PassTxt.DefaultText = "";
+            this.PassTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PassTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PassTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PassTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PassTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PassTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PassTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PassTxt.Location = new System.Drawing.Point(98, 386);
+            this.PassTxt.Name = "PassTxt";
+            this.PassTxt.PasswordChar = '\0';
+            this.PassTxt.PlaceholderText = "";
+            this.PassTxt.SelectedText = "";
+            this.PassTxt.Size = new System.Drawing.Size(200, 36);
+            this.PassTxt.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(94, 362);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 21);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Password";
+            // 
             // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 458);
+            this.ClientSize = new System.Drawing.Size(392, 543);
+            this.Controls.Add(this.PassTxt);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.RankCB);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PhoneTxt);
@@ -159,5 +192,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2ComboBox RankCB;
+        public Guna.UI2.WinForms.Guna2TextBox PassTxt;
+        private System.Windows.Forms.Label label5;
     }
 }

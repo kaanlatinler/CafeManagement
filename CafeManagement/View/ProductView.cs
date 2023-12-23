@@ -67,14 +67,14 @@ namespace CafeManagement.View
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
 
-                if (guna2MessageDialog1.Show("Are You Sure You Want To Delete?") == DialogResult.Yes)
+                if (guna2MessageDialog1.Show("Silmek istediğinize emin misiniz??") == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvID"].Value);
                     string query = "Delete from Products where productID = '" + id + "' ";
                     Hashtable ht = new Hashtable();
                     DBengine.SQL(query, ht);
 
-                    MessageBox.Show("Deleted Successfully");
+                    guna2MessageDialog1.Show("Silme İşlemi Başarılı");
                     GetData();
                 }
             }

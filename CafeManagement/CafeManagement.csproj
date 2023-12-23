@@ -89,6 +89,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormStaff.Designer.cs">
+      <DependentUpon>MainFormStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,18 @@
     <Compile Include="Model\AddTable.Designer.cs">
       <DependentUpon>AddTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\BillList.Designer.cs">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\POSform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +148,18 @@
     </Compile>
     <Compile Include="Model\ProductControl.Designer.cs">
       <DependentUpon>ProductControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SelectTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\SelectTable.Designer.cs">
+      <DependentUpon>SelectTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SelectWaiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\SelectWaiter.Designer.cs">
+      <DependentUpon>SelectWaiter.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,6 +174,12 @@
     </Compile>
     <Compile Include="View\CategoryView.Designer.cs">
       <DependentUpon>CategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KitchenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\KitchenView.Designer.cs">
+      <DependentUpon>KitchenView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ProductView.cs">
       <SubType>Form</SubType>
@@ -172,6 +208,9 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainFormStaff.resx">
+      <DependentUpon>MainFormStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,11 +226,23 @@
     <EmbeddedResource Include="Model\AddTable.resx">
       <DependentUpon>AddTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Model\BillList.resx">
+      <DependentUpon>BillList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Check.resx">
+      <DependentUpon>Check.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\POSform.resx">
       <DependentUpon>POSform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\ProductControl.resx">
       <DependentUpon>ProductControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\SelectTable.resx">
+      <DependentUpon>SelectTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\SelectWaiter.resx">
+      <DependentUpon>SelectWaiter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -208,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CategoryView.resx">
       <DependentUpon>CategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KitchenView.resx">
+      <DependentUpon>KitchenView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductView.resx">
       <DependentUpon>ProductView.cs</DependentUpon>
@@ -336,6 +390,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\Orj\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CategoryViews\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

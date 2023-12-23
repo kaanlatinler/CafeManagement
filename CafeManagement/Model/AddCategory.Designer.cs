@@ -38,6 +38,10 @@
             this.label1.Size = new System.Drawing.Size(149, 30);
             this.label1.Text = "Add Category";
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Parent = this;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;

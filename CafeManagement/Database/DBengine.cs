@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeManagement.Model;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -20,7 +21,7 @@ namespace CafeManagement.Database
         {
             bool isValid = false;
 
-            string query = @"Select * from users where username = '" + user + "' and uPass = '" + pass + "' ";
+            string query = @"Select * from staff where staffID = '" + user + "' and staffPass = '" + pass + "' ";
             SqlCommand cmd = new SqlCommand(query, conn);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -29,14 +30,35 @@ namespace CafeManagement.Database
             if(dt.Rows.Count > 0)
             { 
                 isValid = true;
-                User = dt.Rows[0]["uName"].ToString();
-                Rank = dt.Rows[0]["uRank"].ToString();
+                User = dt.Rows[0]["staffName"].ToString();
+                Rank = dt.Rows[0]["staffRank"].ToString();
+                ID = dt.Rows[0]["staffID"].ToString();
             }
 
             return isValid;
         }
 
-        public static string user, rank;
+        public static bool IsAdmin(string user, string pass)
+        {
+            bool isAdmin = false;
+
+            string query = @"Select * from users where username = '" + user + "' and uPass = '" + pass + "' ";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            if (dt.Rows.Count > 0)
+            {
+                isAdmin = true;
+                User = dt.Rows[0]["uName"].ToString();
+                Rank = dt.Rows[0]["uRank"].ToString();
+            }
+
+            return isAdmin;
+        }
+
+        public static string user, rank, id;
 
         public static string User
         { 
@@ -47,6 +69,11 @@ namespace CafeManagement.Database
         {
             get { return rank; }
             private set { rank = value; }
+        }
+        public static string ID
+        {
+            get { return id; }
+            private set { id = value; }
         }
 
         public static int SQL(string query, Hashtable ht)
@@ -131,7 +158,7 @@ namespace CafeManagement.Database
 
             using (Model)
             {
-                BG.StartPosition = FormStartPosition.Manual;
+                BG.StartPosition = FormStartPosition.CenterScreen;
                 BG.FormBorderStyle = FormBorderStyle.None;
                 BG.Opacity = 0.5d;
                 BG.BackColor = Color.Black;

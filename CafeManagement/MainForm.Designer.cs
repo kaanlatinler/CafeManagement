@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.LeftPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.SettingsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.KitchenBtn = new Guna.UI2.WinForms.Guna2Button();
             this.POSBtn = new Guna.UI2.WinForms.Guna2Button();
             this.StaffBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -55,7 +54,6 @@
             // 
             // LeftPanel
             // 
-            this.LeftPanel.Controls.Add(this.SettingsBtn);
             this.LeftPanel.Controls.Add(this.KitchenBtn);
             this.LeftPanel.Controls.Add(this.POSBtn);
             this.LeftPanel.Controls.Add(this.StaffBtn);
@@ -71,37 +69,6 @@
             this.LeftPanel.Name = "LeftPanel";
             this.LeftPanel.Size = new System.Drawing.Size(288, 899);
             this.LeftPanel.TabIndex = 0;
-            // 
-            // SettingsBtn
-            // 
-            this.SettingsBtn.AutoRoundedCorners = true;
-            this.SettingsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SettingsBtn.BorderRadius = 24;
-            this.SettingsBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.SettingsBtn.CheckedState.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.SettingsBtn.CheckedState.Image = global::CafeManagement.Properties.Resources.kkkkk;
-            this.SettingsBtn.CustomizableEdges.BottomRight = false;
-            this.SettingsBtn.CustomizableEdges.TopRight = false;
-            this.SettingsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SettingsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SettingsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SettingsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SettingsBtn.FillColor = System.Drawing.Color.SlateBlue;
-            this.SettingsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SettingsBtn.ForeColor = System.Drawing.Color.White;
-            this.SettingsBtn.HoverState.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.SettingsBtn.HoverState.Image = global::CafeManagement.Properties.Resources.kkkkk;
-            this.SettingsBtn.Image = global::CafeManagement.Properties.Resources.settings;
-            this.SettingsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.SettingsBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.SettingsBtn.ImageSize = new System.Drawing.Size(30, 30);
-            this.SettingsBtn.Location = new System.Drawing.Point(104, 720);
-            this.SettingsBtn.Name = "SettingsBtn";
-            this.SettingsBtn.Size = new System.Drawing.Size(184, 51);
-            this.SettingsBtn.TabIndex = 9;
-            this.SettingsBtn.Text = "Settings";
-            this.SettingsBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.SettingsBtn.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // KitchenBtn
             // 
@@ -133,6 +100,7 @@
             this.KitchenBtn.Text = "Kitchen";
             this.KitchenBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.KitchenBtn.TextOffset = new System.Drawing.Point(20, 0);
+            this.KitchenBtn.Click += new System.EventHandler(this.KitchenBtn_Click);
             // 
             // POSBtn
             // 
@@ -472,6 +440,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.LeftPanel.ResumeLayout(false);
             this.LeftPanel.PerformLayout();
@@ -492,7 +461,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2Button HomeBtn;
-        public Guna.UI2.WinForms.Guna2Button SettingsBtn;
         public Guna.UI2.WinForms.Guna2Button KitchenBtn;
         public Guna.UI2.WinForms.Guna2Button POSBtn;
         public Guna.UI2.WinForms.Guna2Button StaffBtn;

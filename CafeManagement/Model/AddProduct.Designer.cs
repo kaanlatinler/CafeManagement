@@ -45,6 +45,10 @@
             this.label1.Size = new System.Drawing.Size(138, 30);
             this.label1.Text = "Add Product";
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Parent = this;
+            // 
             // CategoryCB
             // 
             this.CategoryCB.BackColor = System.Drawing.Color.Transparent;

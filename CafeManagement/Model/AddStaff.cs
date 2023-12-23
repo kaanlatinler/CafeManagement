@@ -37,11 +37,11 @@ namespace CafeManagement.Model
 
             if (id == 0)
             {
-                query = "insert into staff Values(@Name, @Phone, @Rank)";
+                query = "insert into staff Values(@Name, @Phone, @Rank, @Pass)";
             }
             else
             {
-                query = "Update staff Set staffName = @Name, staffPhone = @Phone, staffRank = @Rank where staffID = @id ";
+                query = "Update staff Set staffName = @Name, staffPhone = @Phone, staffRank = @Rank, staffPass=@Pass where staffID = @id ";
             }
 
             Hashtable ht = new Hashtable();
@@ -49,10 +49,13 @@ namespace CafeManagement.Model
             ht.Add("@Name", NameTxt.Text);
             ht.Add("@Phone", PhoneTxt.Text);
             ht.Add("@Rank", RankCB.Text);
+            ht.Add("@Pass", PassTxt.Text);
 
             if (DBengine.SQL(query, ht) > 0)
             {
-                MessageBox.Show("Saved Successfully");
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("Kayıt İşlemi Başarılı");
+
                 id = 0;
                 NameTxt.Text = "";
                 PhoneTxt.Text = "";

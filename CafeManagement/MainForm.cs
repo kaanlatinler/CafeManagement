@@ -80,5 +80,10 @@ namespace CafeManagement
             POSform form = new POSform();
             form.Show();
         }
+
+        private void KitchenBtn_Click(object sender, EventArgs e)
+        {
+            AddControls(new KitchenView());
+        }
     }
 }
